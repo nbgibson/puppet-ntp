@@ -8,7 +8,7 @@ class ntp (
   String $service_name        = $ntp::params::service_name,
   Boolean $service_enable     = $ntp::params::service_enable,
   Boolean $service_hasrestart = $ntp::params::service_hasrestart,
-  Boolesn $service_hasstatus  = $ntp::params::service_hasstatus,
+  Boolean $service_hasstatus  = $ntp::params::service_hasstatus,
 ) inherits ::ntp::params {
   class { '::ntp::install': }
   -> class {'ntp::config': }
